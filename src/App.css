@@ -1,0 +1,149 @@
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+input[type="radio"] + label span {
+  transition: background 0.2s, transform 0.2s;
+  border-radius: 9999px;
+}
+
+input[type="radio"] + label span:hover,
+input[type="radio"] + label:hover span {
+  transform: scale(1.2);
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #10b981;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked + label {
+  color: #10b981;
+}
+
+.rating-component input[type="radio"]:checked + label span {
+  background-color: initial; /* or any other desired color */
+  box-shadow: none;
+}
+
+.rating-component input[type="radio"]:checked + label {
+  color: initial; /* or any other desired color */
+}
+
+button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 0px 10px #10b981;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+audio.agent::-webkit-media-controls-panel {
+  background-color: white;
+}
+
+audio.client::-webkit-media-controls-panel {
+  background-color: #d1fae5;
+}
+
+.button-overlay {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button:hover .button-overlay {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.15));
+}
+
+.banner-overlay {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2));
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.filters-container {
+  max-height: 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s ease !important;
+}
+
+.active.filters-container {
+  max-height: 1000px;
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.MuiSpeedDial-fab {
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)) !important;
+  background-color: white !important;
+  padding: 5px !important;
+}

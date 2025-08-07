@@ -1,0 +1,6 @@
+{
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "quoteProps": "consistent",
+    "printWidth": 100
+}

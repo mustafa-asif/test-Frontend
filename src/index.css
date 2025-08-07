@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .columns-1 {
+    column-count: 1;
+  }
+
+  .columns-2 {
+    column-count: 2;
+  }
+
+  .no-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: block;
+  }
+}
+
+.columns-1-2 {
+  column-count: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .columns-1-2 {
+    column-count: 1;
+  }
+}
